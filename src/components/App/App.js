@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from '../Header/Header'
 import Form from '../Form/Form'
@@ -16,11 +16,11 @@ function App() {
           displayAddTask={displayAddTask}
           showForm={()=> setDisplayAddTask(!displayAddTask)}
         />
-  <Route exact path='/' render={(props) => (
-    <>
-      {displayAddTask && <Form />}
-    </>
-  )}/>
+        <Route exact path='/' render={(props) => (
+          <>
+            {displayAddTask && <Form />}
+          </>
+        )}/>
 
 
       </main>
