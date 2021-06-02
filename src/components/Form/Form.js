@@ -6,6 +6,7 @@ const Form = () => {
         type='text' 
         placeholder="Add Task"
         value ='text'
+        // onChange={}
       />
     </form>
   )
