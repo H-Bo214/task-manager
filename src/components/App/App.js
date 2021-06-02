@@ -1,12 +1,16 @@
-import './App.css';
+import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Header from './components/Header'
+import Header from '../Header/Header'
+import './App.css';
 
 function App() {
+  
   return (
     <Router>
       <main className="app-container">
-        <Header />
+        <Header 
+          title = 'Task Manager'
+        />
       </main>
     </Router>
   );
