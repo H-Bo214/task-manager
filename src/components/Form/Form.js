@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Button from '../Button/Button'
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
+import '../Form/Form.css'
 
 const Form = () => {
   const [text, setText] = useState('')
