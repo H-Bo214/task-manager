@@ -8,7 +8,7 @@ const Header = ( { title, displayAddTask, showForm } ) => {
       <h1>{title}</h1>
       <Button
         color={displayAddTask ? 'red' : 'green'}
-        text={displayAddTask ? 'Close' : 'Add Task'}
+        btnText={displayAddTask ? 'Close' : 'Add Task'}
         onClick= {showForm}
       />
     </header>
@@ -17,6 +17,8 @@ const Header = ( { title, displayAddTask, showForm } ) => {
 
 Header.propTypes = {
   title: PropTypes.string,
+  displayAddTask: PropTypes.bool,
+  showForm: PropTypes.func,
 }
 
 export default Header;
