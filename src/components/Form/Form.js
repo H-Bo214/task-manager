@@ -27,8 +27,8 @@ const Form = () => {
     <form >
       {error && 
       <section className='error-container'>
-        <p>⚠️</p>
-        <p style={{color: 'red'}}>{error}</p>
+        <p style={{margin: 0}}>⚠️</p>
+        <p style={{color: 'red', margin: 0}}>{error}</p>
       </section>}
       <label htmlFor='task-input'>
         <strong>Task</strong>
