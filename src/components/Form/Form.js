@@ -40,6 +40,7 @@ const Form = () => {
         onChange={(e) => setText(e.target.value)}
         id='task-input'
         className='text-input'
+        onFocus={(e) => setError(null)}
       />
       <label htmlFor='date-time-input'>
         <strong>Date & Time</strong>
@@ -53,6 +54,7 @@ const Form = () => {
       placeholderText=" Select a date & time"
       id='date-time-input'
       className='text-input'
+      onFocus={(e) => setError(null)}
     />
     <section className='priority-container'>
       <label htmlFor='priority' className='priority-task'>
