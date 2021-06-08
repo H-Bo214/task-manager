@@ -22,7 +22,7 @@ function App() {
           setTasks(allTasks)
         }
       } catch (error) {
-        setError('An error occurred getting your tasks')
+        setError('An error occurred getting your tasks.')
       }
     }
     getTasks()
@@ -36,7 +36,7 @@ function App() {
         setTasks([...tasks, newTask])
       }
     } catch (error) {
-      console.log('error', error)
+      setError('An error occurred adding a new task.')
     }
   }
 
@@ -49,7 +49,7 @@ function App() {
         setTasks(tasks.filter(task => task.id !== id))
       }
     } catch (error) {
-      console.log('error', error)
+      setError('An error occurred deleting your tasks.')
     }
   }
   return (
