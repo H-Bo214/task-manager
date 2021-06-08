@@ -1,7 +1,7 @@
 import deleteIcon from '../../assets/cancel-icon.svg'
 import '../Task/Task.css'
 
-const Task = ( { task } ) => {
+const Task = ( { task, deleteTask } ) => {
   return (
     <section className='single-task'>
       <section className='text-date'>
@@ -12,7 +12,7 @@ const Task = ( { task } ) => {
         className='delete-icon' 
         src={deleteIcon}
         alt='Red circle icon with white x in the center.'
-        onClick={() => console.log('x')}
+        onClick={() => deleteTask(task.id)}
       />
     </section>
   )

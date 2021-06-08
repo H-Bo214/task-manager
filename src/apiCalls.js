@@ -37,3 +37,17 @@ export function addTask(task) {
     }
   })
 }
+
+export function removeTask(id) {
+  return fetch(`http://localhost:5000/tasks/${id}`, 
+  {
+    method: 'DELETE',
+  })
+  .then(res => {
+    if (res.ok) {
+      return res.json()
+    } else {
+      throw res
+    }
+  })
+}

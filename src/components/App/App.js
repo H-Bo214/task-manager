@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { fetchTasks, fetchTask, addTask } from '../../apiCalls'
+import { fetchTasks, fetchTask, addTask, removeTask } from '../../apiCalls'
 import Header from '../Header/Header'
 import Form from '../Form/Form'
 import Tasks from '../Tasks/Tasks'
@@ -30,7 +30,6 @@ function App() {
 
   //add a new task
   const addNewTask = async (task) => {
-    console.log('task', task)
     try {
       const newTask = await addTask(task)
       if (newTask) {
@@ -41,6 +40,18 @@ function App() {
     }
   }
 
+  // delete Task
+
+  const deleteTask = async (id) => {
+    try {
+      const deleted = await removeTask(id)
+      if (deleted) {
+        setTasks(tasks.filter(task => task.id !== id))
+      }
+    } catch (error) {
+      console.log('error', error)
+    }
+  }
   return (
     <Router>
       <main className="app-container">
@@ -57,7 +68,7 @@ function App() {
             {displayAddTask && <Form addNewTask={addNewTask}/>}
             <Tasks 
               tasks={tasks}
-              // onDelete={}
+              deleteTask={deleteTask}
               // onToggle={}
             />
           </>
