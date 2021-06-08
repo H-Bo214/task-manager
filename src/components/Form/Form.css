@@ -6,6 +6,7 @@ form {
 
 label {
   margin: 1em 0em;
+  color: #A8DADC;
 }
 
 .text-input {
@@ -17,7 +18,7 @@ label {
 
 .error-container {
   display: flex;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   align-items: center;
 }
 
@@ -28,5 +29,20 @@ label {
 }
 
 .priority-task  {
-  padding-right: 4em;
+  padding-left: 0.5em;
 }
+
+input.check-box {
+  height: 18px;
+  width: 18px;
+  margin: 0;
+}
+
+.submit-task-btn {
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  padding: 0.8em;
+  color: #F1FAEE;
+}
+

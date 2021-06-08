@@ -27,8 +27,8 @@ const Form = () => {
     <form >
       {error && 
       <section className='error-container'>
-        <p style={{margin: 0}}>⚠️</p>
-        <p style={{color: 'red', margin: 0}}>{error}</p>
+        <p style={{marginRight: 11}}>⚠️</p>
+        <p style={{color: 'red'}}>{error}</p>
       </section>}
       <label htmlFor='task-input'>
         <strong>Task</strong>
@@ -57,22 +57,24 @@ const Form = () => {
       onFocus={(e) => setError(null)}
     />
     <section className='priority-container'>
-      <label htmlFor='priority' className='priority-task'>
-        <strong>Priority task?</strong>
-      </label>  
       <input
         type='checkbox'
         checked={priority}
         value={priority}
         onChange={(e) => setPriority(e.target.checked)}
         id='priority'
+        className='check-box'
       />
+      <label htmlFor='priority' className='priority-task'>
+        <strong>Priority</strong>
+      </label>  
     </section>
       <Button 
         btnText='Submit this task'
         onClick={onSubmit}
+        color={'#457B9D'}
+        btnClassName='submit-task-btn'
       />
-
     </form>
   )
 }

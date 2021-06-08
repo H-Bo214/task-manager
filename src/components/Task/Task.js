@@ -4,8 +4,10 @@ import '../Task/Task.css'
 const Task = ( { task } ) => {
   return (
     <section className='single-task'>
-      <h3>{task.text}</h3>
-      <p>{task.date}</p>
+      <section className='text-date'>
+        <h4>{task.text}</h4>
+        <p>{task.date}</p>
+      </section>
       <img
         className='delete-icon' 
         src={deleteIcon}

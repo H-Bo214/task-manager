@@ -5,10 +5,15 @@ header {
   align-items: center;
 }
 
+h1 {
+  color: #A8DADC;
+}
+
 header button {
   font-weight:bold;
   border: none;
   border-radius: 4px;
   width: 6em;
   height: 3em;
+  color: #F1FAEE;
 }
