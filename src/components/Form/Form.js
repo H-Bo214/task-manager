@@ -4,20 +4,20 @@ import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 import '../Form/Form.css'
 
-const Form = () => {
+const Form = ({ addNewTask }) => {
   const [text, setText] = useState('')
-  const [startDate, setStartDate] = useState(null)
+  const [date, setDate] = useState(null)
   const [priority, setPriority] = useState(false)
   const [error, setError] = useState(null)
 
   const onSubmit = (e) => {
     e.preventDefault()
-    if (!text || !startDate) {
+    if (!text || !date) {
       setError('Please enter a task and date.')
       return
     }
-    //API call passed down from App.js will go here.
-    setStartDate(null)
+    addNewTask({text, date, priority})
+    setDate(null)
     setText('')
     setPriority(false)
     setError(null)
@@ -46,8 +46,8 @@ const Form = () => {
         <strong>Date & Time</strong>
       </label>
       <DatePicker
-      selected={startDate}
-      onChange={(date) => setStartDate(date)}
+      selected={date}
+      onChange={(date) => setDate(date)}
       shouldCloseOnSelect={true}
       showTimeSelect
       dateFormat="MMMM d, yyyy, h:mm aa"

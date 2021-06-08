@@ -1,27 +1,45 @@
 import { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { fetchTasks } from '../../apiCalls'
+import { fetchTasks, fetchTask, addTask } from '../../apiCalls'
 import Header from '../Header/Header'
 import Form from '../Form/Form'
 import Tasks from '../Tasks/Tasks'
 import Footer from '../Footer/Footer'
 import { mockData } from '../../mockData'
 import './App.css';
-// import { fetchTasks } from '../../apiCalls';
 
 function App() {
   const [displayAddTask, setDisplayAddTask] = useState(false)
   const [tasks, setTasks] = useState([])
+  const [error, setError] = useState('')
 
+  //fetch existing tasks on page load
   useEffect(() => {
     const getTasks = async () => {
-      const allTasks = await fetchTasks()
-      setTasks(allTasks)
+      try {
+        const allTasks = await fetchTasks()
+        if (allTasks) {
+          setTasks(allTasks)
+        }
+      } catch (error) {
+        setError('An error occurred getting your tasks')
+      }
     }
     getTasks()
   }, [])
 
-
+  //add a new task
+  const addNewTask = async (task) => {
+    console.log('task', task)
+    try {
+      const newTask = await addTask(task)
+      if (newTask) {
+        setTasks([...tasks, newTask])
+      }
+    } catch (error) {
+      console.log('error', error)
+    }
+  }
 
   return (
     <Router>
@@ -31,9 +49,12 @@ function App() {
           displayAddTask={displayAddTask}
           showForm={()=> setDisplayAddTask(!displayAddTask)}
         />
+        <>
+        {error}
+        </>
         <Route exact path='/' render={(props) => (
           <>
-            {displayAddTask && <Form />}
+            {displayAddTask && <Form addNewTask={addNewTask}/>}
             <Tasks 
               tasks={tasks}
               // onDelete={}

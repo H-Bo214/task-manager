@@ -1,19 +1,40 @@
 {
   "tasks": [
-    { "id": 1, 
-      "text": "Go to grocery store.", 
+    {
+      "id": 1,
+      "text": "Go to grocery store.",
       "date": "June 1 2021, 9:00am",
       "priority": false
     },
-    { "id": 2, 
-      "text": "Pay bills", 
+    {
+      "id": 2,
+      "text": "Pay bills",
       "date": "July 4 2021, 10:00am",
       "priority": false
     },
-    { "id": 3, 
-      "text": "Doctor's appointment", 
+    {
+      "id": 3,
+      "text": "Doctor's appointment",
       "date": "June 10 2021, 12:00pm",
       "priority": true
+    },
+    {
+      "text": "Make car payment",
+      "date": "2021-06-08T21:30:00.000Z",
+      "priority": false,
+      "id": 4
+    },
+    {
+      "text": "blah blah",
+      "date": "2021-07-08T22:00:00.000Z",
+      "priority": false,
+      "id": 5
+    },
+    {
+      "text": "Take meds",
+      "date": "2021-06-26T23:00:00.000Z",
+      "priority": false,
+      "id": 6
     }
   ]
 }
