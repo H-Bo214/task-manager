@@ -1,7 +1,21 @@
 img {
   width: 20px;
+  margin-left: 3em;
 }
 
 .single-task {
-  border: 2px solid blue;
+  background: #A8DADC;
+  display: flex;
+  justify-content:space-around;
+  margin: 0.8em 0;
+  color: #1D3557;
+  border-radius: 4px;
+}
+
+.text-date,h4 {
+  margin: 3px;
+
+}
+.text-date,p {
+  margin: 3px;
 }

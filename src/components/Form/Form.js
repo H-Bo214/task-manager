@@ -13,7 +13,7 @@ const Form = () => {
   const onSubmit = (e) => {
     e.preventDefault()
     if (!text || !startDate) {
-      setError('⚠️ Please enter a task and date.')
+      setError('Please enter a task and date.')
       return
     }
     //API call passed down from App.js will go here.
@@ -25,35 +25,56 @@ const Form = () => {
 
   return (
     <form >
-      {error && <p>{error}</p>}
-      <label>Task</label>
+      {error && 
+      <section className='error-container'>
+        <p style={{marginRight: 11}}>⚠️</p>
+        <p style={{color: 'red'}}>{error}</p>
+      </section>}
+      <label htmlFor='task-input'>
+        <strong>Task</strong>
+      </label>
       <input 
         type='text' 
         placeholder='Add Task'
         value ={text}
         onChange={(e) => setText(e.target.value)}
+        id='task-input'
+        className='text-input'
+        onFocus={(e) => setError(null)}
       />
-      <label>Date & Time</label>
+      <label htmlFor='date-time-input'>
+        <strong>Date & Time</strong>
+      </label>
       <DatePicker
       selected={startDate}
       onChange={(date) => setStartDate(date)}
-      shouldCloseOnSelect={false}
+      shouldCloseOnSelect={true}
       showTimeSelect
       dateFormat="MMMM d, yyyy, h:mm aa"
       placeholderText=" Select a date & time"
+      id='date-time-input'
+      className='text-input'
+      onFocus={(e) => setError(null)}
     />
-    <label>Priority task?</label>  
-    <input
-      type='checkbox'
-      checked={priority}
-      value={priority}
-      onChange={(e) => setPriority(e.target.checked)}
-    />
+    <section className='priority-container'>
+      <input
+        type='checkbox'
+        checked={priority}
+        value={priority}
+        onChange={(e) => setPriority(e.target.checked)}
+        id='priority'
+        className='check-box'
+      />
+      <label htmlFor='priority' className='priority-task'>
+        <strong>Priority</strong>
+      </label>  
+    </section>
       <Button 
         btnText='Submit this task'
         onClick={onSubmit}
+        color={'#457B9D'}
+        btnClassName='submit-task-btn'
       />
-
     </form>
   )
 }
