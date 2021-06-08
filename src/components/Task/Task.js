@@ -1,10 +1,10 @@
 import deleteIcon from '../../assets/cancel-icon.svg'
 import '../Task/Task.css'
 
-const Task = ( { task, deleteTask } ) => {
+const Task = ( { task, deleteTask, togglePriority } ) => {
   return (
     <section className={task.priority ? 'priority' : 'single-task'}>
-      <section className='text-date'>
+      <section className='text-date' onDoubleClick={() => togglePriority(task.id)}>
         <h4>{task.text}</h4>
         <p>{task.date}</p>
       </section>

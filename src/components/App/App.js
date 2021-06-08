@@ -52,7 +52,15 @@ function App() {
       setError('An error occurred deleting your tasks.')
     }
   }
-  
+
+  // toggle priority flag
+
+  const togglePriority = async (id) => {
+    const taskToChange = await fetchTask(id)
+    // const taskId = taskToChange.id
+    console.log('taskToChange', await taskToChange.id)
+  }
+
   return (
     <Router>
       <main className="app-container">
@@ -70,7 +78,7 @@ function App() {
             <Tasks 
               tasks={tasks}
               deleteTask={deleteTask}
-              // onToggle={}
+              togglePriority={togglePriority}
             />
           </>
         )}/>
