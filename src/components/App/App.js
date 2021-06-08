@@ -52,6 +52,7 @@ function App() {
       setError('An error occurred deleting your tasks.')
     }
   }
+  
   return (
     <Router>
       <main className="app-container">
