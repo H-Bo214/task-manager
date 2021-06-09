@@ -13,6 +13,7 @@ export function fetchTask(id) {
   return fetch(`http://localhost:5000/tasks/${id}`)
   .then(res => {
     if (res.ok) {
+      console.log('res', res)
       return res.json()
     } else {
       throw res
@@ -52,14 +53,14 @@ export function removeTask(id) {
   })
 }
 
-export const changePriority = async (id) => {
+export const changePriority = async (id, taskToSend) => {
   return fetch(`http://localhost:5000/tasks/${id}`, 
   {
     method: 'PUT',
     headers: {
       'Content-type': 'application/json'
     },
-    body: JSON.stringify()
+    body: JSON.stringify(taskToSend)
   })
   .then(res => {
     if (res.ok) {

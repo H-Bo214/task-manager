@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { fetchTasks, fetchTask, addTask, removeTask } from '../../apiCalls'
+import { fetchTasks, fetchTask, addTask, removeTask, changePriority } from '../../apiCalls'
 import Header from '../Header/Header'
 import Form from '../Form/Form'
 import Tasks from '../Tasks/Tasks'
@@ -14,6 +14,7 @@ function App() {
   const [error, setError] = useState('')
 
   //fetch existing tasks on page load
+  
   useEffect(() => {
     const getTasks = async () => {
       try {
@@ -29,6 +30,7 @@ function App() {
   }, [])
 
   //add a new task
+
   const addNewTask = async (task) => {
     try {
       const newTask = await addTask(task)
@@ -57,8 +59,10 @@ function App() {
 
   const togglePriority = async (id) => {
     const taskToChange = await fetchTask(id)
-    // const taskId = taskToChange.id
-    console.log('taskToChange', await taskToChange.id)
+    const updatedTask = {...taskToChange, priority: !taskToChange.priority} 
+    const updatedData = await changePriority(taskToChange.id, updatedTask)
+
+    setTasks(tasks.map(task => task.id === id ? {...task, priority: updatedData.priority}: task))
   }
 
   return (

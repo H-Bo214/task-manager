@@ -1,9 +1,9 @@
 {
   "tasks": [
     {
-      "text": "dfasdf",
-      "date": "2021-06-10T22:00:00.000Z",
-      "priority": true,
+      "text": "Throw trash",
+      "date": "2021-06-12T21:00:00.000Z",
+      "priority": false,
       "id": 1
     }
   ]
