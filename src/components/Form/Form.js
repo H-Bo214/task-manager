@@ -2,6 +2,8 @@ import { useState } from 'react'
 import Button from '../Button/Button'
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
+import format from 'date-fns/format'
+
 import '../Form/Form.css'
 
 const Form = ({ addNewTask }) => {
@@ -16,6 +18,7 @@ const Form = ({ addNewTask }) => {
       setError('Please enter a task and date.')
       return
     }
+
     addNewTask({text, date, priority})
     setDate(null)
     setText('')
@@ -23,6 +26,9 @@ const Form = ({ addNewTask }) => {
     setError(null)
   }
 
+  let formattedDate = () => {
+     return format(date, 'MMMM d, yyyy, h:mm aa')
+}
   return (
     <form >
       {error && 
@@ -47,11 +53,11 @@ const Form = ({ addNewTask }) => {
       </label>
       <DatePicker
       selected={date}
+      dateFormat="MMMM d, yyyy, h:mm aa"
       onChange={(date) => setDate(date)}
       shouldCloseOnSelect={true}
       showTimeSelect
-      dateFormat="MMMM d, yyyy, h:mm aa"
-      placeholderText=" Select a date & time"
+      placeholderText="Select a date & time"
       id='date-time-input'
       className='text-input'
       onFocus={(e) => setError(null)}
