@@ -12,7 +12,7 @@ const Task = ( { task, deleteTask, togglePriority } ) => {
   return (
     <section className={task.priority ? 'priority' : 'single-task'}>
       <section className='text-date' onDoubleClick={() => togglePriority(task.id)}>
-        <h4>{task.text}</h4>
+        <p className="task-text">{task.text}</p>
         <p>{formattedDate()}</p>
       </section>
       <img

@@ -3,3 +3,8 @@ footer {
   text-align: center;
   color: #A8DADC;
 }
+
+a {
+  color: #A8DADC;
+  text-decoration: none;
+}
