@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Button from '../Button/Button'
 import DatePicker from "react-datepicker"
+import PropTypes from 'prop-types'
 import "react-datepicker/dist/react-datepicker.css"
 import '../Form/Form.css'
 
@@ -80,4 +81,8 @@ const Form = ({ addNewTask }) => {
   )
 }
 
+  Form.propTypes = {
+    addNewTask: PropTypes.func
+  }
+  
 export default Form

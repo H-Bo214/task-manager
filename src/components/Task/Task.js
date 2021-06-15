@@ -1,5 +1,6 @@
 import deleteIcon from '../../assets/cancel-icon.svg'
 import format from 'date-fns/format'
+import PropTypes from 'prop-types'
 import '../Task/Task.css'
 
 const Task = ( { task, deleteTask, togglePriority } ) => {
@@ -23,6 +24,12 @@ const Task = ( { task, deleteTask, togglePriority } ) => {
       />
     </section>
   )
+}
+
+Task.propTypes = {
+  task: PropTypes.object,
+  deleteTask: PropTypes.func,
+  togglePriority: PropTypes.func
 }
 
 export default Task

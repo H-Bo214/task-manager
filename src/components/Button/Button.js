@@ -12,10 +12,11 @@ const Button = ( { color, btnText, onClick, btnClassName } ) => {
   )
 }
 
-Button.prototypes = {
+Button.propTypes = {
   color: PropTypes.string,
   btnText: PropTypes.string,
   onClick: PropTypes.func,
+  btnClassName: PropTypes.string
 }
 
 export default Button
