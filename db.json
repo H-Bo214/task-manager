@@ -1,28 +1,16 @@
 {
   "tasks": [
     {
-      "text": "sdfsdfasdf",
-      "date": "2021-06-20T00:00:00.000Z",
+      "text": "Dentist appointment",
+      "date": "2021-07-17T18:00:00.000Z",
       "priority": false,
       "id": 1
     },
     {
-      "text": "dfasdf",
-      "date": "2021-06-26T00:30:00.000Z",
+      "text": "dfsadf",
+      "date": "2021-06-11T19:00:00.000Z",
       "priority": false,
       "id": 2
-    },
-    {
-      "text": "dfasdf",
-      "date": "2021-06-25T00:30:00.000Z",
-      "priority": false,
-      "id": 3
-    },
-    {
-      "text": "Go shopping",
-      "date": "2021-06-26T01:00:00.000Z",
-      "priority": false,
-      "id": 4
     }
   ]
 }

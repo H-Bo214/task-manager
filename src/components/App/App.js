@@ -6,7 +6,6 @@ import Form from '../Form/Form'
 import Tasks from '../Tasks/Tasks'
 import Footer from '../Footer/Footer'
 import About from '../About/About'
-import { mockData } from '../../mockData'
 import './App.css';
 
 function App() {
@@ -89,7 +88,6 @@ function App() {
           </>
         )}/>
         <Route exact path ='/about' component={About} />
-        
       </main>
     </Router>
   );

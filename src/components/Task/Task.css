@@ -1,5 +1,6 @@
 img {
   width: 20px;
+  height: 57px;
   margin-left: 3em;
 }
 
@@ -12,10 +13,9 @@ img {
   border-radius: 4px;
 }
 
-/* .text-date,h4 {
-  margin: 3px;
-
-} */
+.single-task:hover {
+  cursor: pointer;
+}
 
 .task-text {
   font-size: 20px;

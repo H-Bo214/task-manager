@@ -2,7 +2,14 @@ import  Task  from '../Task/Task'
 import '../Tasks/Tasks.css'
 
 const Tasks = ( { tasks, deleteTask, togglePriority } ) => {
-  const singleTask = tasks.map((task) => <Task  key={task.id}task={task} deleteTask={deleteTask} togglePriority={togglePriority}/>)
+  const singleTask = tasks.map((task) => 
+    <Task  
+      key={task.id}
+      task={task} 
+      deleteTask={deleteTask} 
+      togglePriority={togglePriority}
+    />
+  )
 
   return (
     <section className='all-tasks'>

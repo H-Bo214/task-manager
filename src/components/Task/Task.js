@@ -1,6 +1,6 @@
 import deleteIcon from '../../assets/cancel-icon.svg'
-import '../Task/Task.css'
 import format from 'date-fns/format'
+import '../Task/Task.css'
 
 const Task = ( { task, deleteTask, togglePriority } ) => {
   let newDate = new Date(task.date)

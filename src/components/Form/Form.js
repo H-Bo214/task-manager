@@ -2,8 +2,6 @@ import { useState } from 'react'
 import Button from '../Button/Button'
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
-import format from 'date-fns/format'
-
 import '../Form/Form.css'
 
 const Form = ({ addNewTask }) => {
@@ -26,9 +24,6 @@ const Form = ({ addNewTask }) => {
     setError(null)
   }
 
-  let formattedDate = () => {
-     return format(date, 'MMMM d, yyyy, h:mm aa')
-}
   return (
     <form >
       {error && 
@@ -52,29 +47,29 @@ const Form = ({ addNewTask }) => {
         <strong>Date & Time</strong>
       </label>
       <DatePicker
-      selected={date}
-      dateFormat="MMMM d, yyyy, h:mm aa"
-      onChange={(date) => setDate(date)}
-      shouldCloseOnSelect={true}
-      showTimeSelect
-      placeholderText="Select a date & time"
-      id='date-time-input'
-      className='text-input'
-      onFocus={(e) => setError(null)}
-    />
-    <section className='priority-container'>
-      <input
-        type='checkbox'
-        checked={priority}
-        value={priority}
-        onChange={(e) => setPriority(e.target.checked)}
-        id='priority'
-        className='check-box'
+        selected={date}
+        dateFormat="MMMM d, yyyy, h:mm aa"
+        onChange={(date) => setDate(date)}
+        shouldCloseOnSelect={true}
+        showTimeSelect
+        placeholderText="Select a date & time"
+        id='date-time-input'
+        className='text-input'
+        onFocus={(e) => setError(null)}
       />
-      <label htmlFor='priority' className='priority-task'>
-        <strong>Priority</strong>
-      </label>  
-    </section>
+      <section className='priority-container'>
+        <input
+          type='checkbox'
+          checked={priority}
+          value={priority}
+          onChange={(e) => setPriority(e.target.checked)}
+          id='priority'
+          className='check-box'
+        />
+        <label htmlFor='priority' className='priority-task'>
+          <strong>Priority</strong>
+        </label>  
+      </section>
       <Button 
         btnText='Submit this task'
         onClick={onSubmit}
