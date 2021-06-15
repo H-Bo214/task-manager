@@ -5,6 +5,7 @@ import Header from '../Header/Header'
 import Form from '../Form/Form'
 import Tasks from '../Tasks/Tasks'
 import Footer from '../Footer/Footer'
+import About from '../About/About'
 import { mockData } from '../../mockData'
 import './App.css';
 
@@ -68,26 +69,27 @@ function App() {
   return (
     <Router>
       <main className="app-container">
-        <Header 
-          title = 'Task Manager'
-          displayAddTask={displayAddTask}
-          showForm={()=> setDisplayAddTask(!displayAddTask)}
-        />
         <>
-        {error}
+        {<p>{error}</p>}
         </>
-        <Route exact path='/' render={(props) => (
+        <Route exact path='/' render={() => (
           <>
+            <Header 
+              title = 'Task Manager'
+              displayAddTask={displayAddTask}
+              showForm={()=> setDisplayAddTask(!displayAddTask)}
+            />
             {displayAddTask && <Form addNewTask={addNewTask}/>}
             <Tasks 
               tasks={tasks}
               deleteTask={deleteTask}
               togglePriority={togglePriority}
             />
+            <Footer />
           </>
         )}/>
-        <Footer />
-
+        <Route exact path ='/about' component={About} />
+        
       </main>
     </Router>
   );

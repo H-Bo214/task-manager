@@ -7,7 +7,7 @@ const Header = ( { title, displayAddTask, showForm } ) => {
     <header>
       <h1>{title}</h1>
       <Button
-        color={displayAddTask ? '#E63946' : '#457B9D'}
+        color={displayAddTask ? '#E62233' : '#457B9D'}
         btnText={displayAddTask ? 'Close' : 'Add Task'}
         onClick= {showForm}
       />
