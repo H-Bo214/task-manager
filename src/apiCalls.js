@@ -13,7 +13,6 @@ export function fetchTask(id) {
   return fetch(`http://localhost:5000/tasks/${id}`)
   .then(res => {
     if (res.ok) {
-      console.log('res', res)
       return res.json()
     } else {
       throw res

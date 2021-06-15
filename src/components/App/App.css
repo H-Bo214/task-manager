@@ -11,6 +11,7 @@
   justify-content: center;
   padding-top: 2em;
 }
+
 .app-container {
   border: 2px solid #455E89;
   border-radius: 6px;
@@ -18,12 +19,6 @@
   flex-direction: column;
   max-width: 500px;
   min-width: 350px;
-  /* position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%); */
   font-family: 'Ubuntu', sans-serif;
   background: #1D3557;
 }
-
-
