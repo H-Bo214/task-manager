@@ -1,16 +1,10 @@
 {
   "tasks": [
     {
-      "text": "Dentist appointment",
-      "date": "2021-07-17T18:00:00.000Z",
-      "priority": false,
+      "text": "Buy groceries",
+      "date": "2021-06-26T22:00:00.000Z",
+      "priority": true,
       "id": 1
-    },
-    {
-      "text": "dfsadf",
-      "date": "2021-06-11T19:00:00.000Z",
-      "priority": false,
-      "id": 2
     }
   ]
 }
