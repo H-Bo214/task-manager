@@ -1,5 +1,5 @@
 import React from 'react'
-import { fireEvent, render, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import Tasks from '../Tasks/Tasks'
 import { MemoryRouter } from 'react-router-dom'
@@ -55,7 +55,7 @@ describe('Tasks', () => {
         />
       </MemoryRouter>
      ) 
-     
+
      const userMsg = screen.getByText("No tasks to display")
      expect(userMsg).toBeInTheDocument()
   })
