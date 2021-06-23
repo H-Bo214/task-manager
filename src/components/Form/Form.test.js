@@ -121,4 +121,42 @@ describe('Form',  () => {
 
   })
 
+
+  it ('should display an error message if no task input value',  () => {
+    const addTask = jest.fn()
+    render (
+      <MemoryRouter>
+        <Form 
+          addNewTask ={addTask}
+        />
+      </MemoryRouter>
+    )
+    
+    const task = screen.getByLabelText('Task')
+    expect(task).toBeInTheDocument()
+
+    const dateTime = screen.getByLabelText('Date & Time')
+    expect(dateTime).toBeInTheDocument()
+
+    const taskInput = screen.getByPlaceholderText('Add Task')
+    expect(taskInput).toBeInTheDocument()
+
+    const dateTimeInput = screen.getByPlaceholderText('Select a date & time')
+    expect(dateTimeInput).toBeInTheDocument()
+
+    const checkBox = screen.getByRole('checkbox')
+    expect(checkBox).toBeInTheDocument()
+
+    const button = screen.getByText('Submit this task')
+    expect(button).toBeInTheDocument()
+
+    fireEvent.change(taskInput, {target:{value: ''}})
+    expect(taskInput.value).toBe('')
+
+    fireEvent.click(button)
+    expect(addTask).toHaveBeenCalledTimes(0)
+    const error = screen.getByText('Please enter a task and date.')
+    expect(error).toBeInTheDocument()
+  })
+  
 })
