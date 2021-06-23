@@ -69,7 +69,7 @@ function App() {
     <Router>
       <main className="app-container">
         <>
-        {<p>{error}</p>}
+        {<p style={{color: 'red'}}>{error}</p>}
         </>
         <Route exact path='/' render={() => (
           <>
