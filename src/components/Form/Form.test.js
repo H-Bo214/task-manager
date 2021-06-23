@@ -64,7 +64,21 @@ describe('Form',  () => {
 
   })
 
+  it('should be able to update the task priority',  () => {
+    render (
+      <MemoryRouter>
+        <Form />
+      </MemoryRouter>
+    )
 
+    const checkBox = screen.getByRole('checkbox')
+    expect(checkBox).toBeInTheDocument()
+    expect(checkBox.checked).toBe(false)
+    
+    fireEvent.change(checkBox, {target:{checked: true}})
+    expect(checkBox.checked).toBe(true)
+
+  })
 
 
 })
