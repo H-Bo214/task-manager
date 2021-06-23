@@ -47,7 +47,22 @@ describe('Form',  () => {
 
   })
 
+  it('should be able to update the date & time value',  () => {
+    render (
+      <MemoryRouter>
+        <Form />
+      </MemoryRouter>
+    )
 
+    const dateTime = screen.getByLabelText('Date & Time')
+    expect(dateTime).toBeInTheDocument()
+
+    const dateTimeValue = 'July 17, 2021, 11:00 AM'
+    
+    fireEvent.change(dateTime, {target:{value: dateTimeValue}})
+    expect(dateTime.value).toBe(dateTimeValue)
+
+  })
 
 
 
