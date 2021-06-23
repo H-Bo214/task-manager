@@ -152,7 +152,7 @@ describe('App',  () => {
     ]
 
     await fetchTasks.mockResolvedValueOnce(tasks)
-    
+
     render(
       <MemoryRouter>
         <App />
@@ -161,6 +161,10 @@ describe('App',  () => {
     
     await waitFor(() => expect(fetchTasks).toHaveBeenCalledTimes(2))
 
+    let text3 = screen.getByText(tasks[2].text)
+    let date3 = screen.getByText(tasks[2].date)
+    expect(text3).toBeInTheDocument()
+    expect(date3).toBeInTheDocument()
   })
 
 
