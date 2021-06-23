@@ -31,4 +31,25 @@ describe('Form',  () => {
     expect(button).toBeInTheDocument()
   })
 
+  it('should be able to update the task input value',  () => {
+    render (
+      <MemoryRouter>
+        <Form />
+      </MemoryRouter>
+    )
+
+    const taskInput = screen.getByPlaceholderText('Add Task')
+    expect(taskInput).toBeInTheDocument()
+
+    const taskToDo = 'Doctor\'s appointment'
+    fireEvent.change(taskInput, {target:{value: taskToDo}})
+    expect(taskInput.value).toBe(taskToDo)
+
+  })
+
+
+
+
+
+
 })
