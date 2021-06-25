@@ -224,6 +224,47 @@ describe('App',  () => {
     expect(tasks).toHaveLength(1)
   })
 
+  // it('should be able to fetch a single task',  async () => {
+  //   let tasks = [{
+  //     "text": "Dentist appointment",
+  //     "date": "July 17, 2021, 11:00 AM",
+  //     "priority": false,
+  //     "id": 1
+  //     }, 
+  //     {
+  //     "text": "Buy groceries",
+  //     "date": "June 4, 2021, 11:00 AM",
+  //     "priority": false,
+  //     "id": 2
+  //     }
+  //   ]
+
+  //   await fetchTasks.mockResolvedValueOnce(tasks)
+
+  //   render(
+  //     <MemoryRouter>
+  //       <App />
+  //     </MemoryRouter>
+  //   )
+
+  //   await waitFor(() => expect(fetchTasks).toHaveBeenCalledTimes(1))
+
+  //   let text1 = screen.getByText(tasks[0].text)
+  //   let date1 = screen.getByText(tasks[0].date)
+  //   expect(text1).toBeInTheDocument()
+  //   expect(date1).toBeInTheDocument()
+
+  //   let text2 = screen.getByText(tasks[1].text)
+  //   let date2 = screen.getByText(tasks[1].date)
+  //   expect(text2).toBeInTheDocument()
+  //   expect(date2).toBeInTheDocument()
+
+  //   fireEvent.dblClick(text1)
+  //   await waitFor(() => expect(fetchTask).toHaveBeenCalledTimes(1))
+  //   await fetchTask.mockResolvedValueOnce(tasks[0])
+
+    
+  // })
   // it('should be able to change the priority of a task', async () =>{
   //   let tasks = [{
   //     "text": "Dentist appointment",
@@ -261,21 +302,10 @@ describe('App',  () => {
   //   await waitFor(() => expect(fetchTask).toHaveBeenCalledTimes(1))
   //   await fetchTask.mockResolvedValueOnce(tasks[0])
     
-
-
-
     // await changePriority.mockResolvedValueOnce(tasks[0].id, updatedTask)
-
 
     // await waitFor(() => expect(changePriority).toHaveBeenCalledTimes(1))
     // expect(priority1).toBe(true)
   // })
 
 })
-
-
-
-
-
-
-
