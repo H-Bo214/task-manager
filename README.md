@@ -35,16 +35,16 @@
 ## Demo
 
 Adding a task, choosing a date/time and setting the task priority
-![](https://media.giphy.com/media/iwxPKxaATiR8P8PpZt/giphy.gif)
+![](https://media.giphy.com/media/iwxPKxaATiR8P8PpZt/giphy.gif)</br>
 
 Adding a task
-![](https://media.giphy.com/media/3qflNbMf7aXGAsJvwe/giphy.gif)
+![](https://media.giphy.com/media/3qflNbMf7aXGAsJvwe/giphy.gif)</br>
 
 Toggle task priority
-![](https://media.giphy.com/media/2yuXKehczH8xrmB0xa/giphy.gif)
+![](https://media.giphy.com/media/2yuXKehczH8xrmB0xa/giphy.gif)</br>
 
 Deleting a task
-![](https://media.giphy.com/media/geZxMKVkhWeg2ICB4j/giphy.gif)
+![](https://media.giphy.com/media/geZxMKVkhWeg2ICB4j/giphy.gif)</br>
 
 ## Lighthouse audit
 <img width="1266" alt="lighthouse-audit" src="https://user-images.githubusercontent.com/50157153/124833719-75589d80-df33-11eb-8d0f-58b7f1e9597f.png">
