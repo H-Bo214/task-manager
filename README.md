@@ -15,7 +15,7 @@
 
 
 ## General Information
-- Task Manager allows you to create and manage a list of tasks.
+### Task Manager allows you to create and manage a list of tasks.
 
 
 ## Setup
