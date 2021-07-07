@@ -18,6 +18,14 @@
 ## General Information
 - Task Manager allows you to create and manage a list of tasks.
 
+## Setup
+Fork and clone down the repo
+
+Once you have locally cloned down the repo, within that directory, run npm install. Once all dependencies are installed, 
+- run ```npm start```  
+- Open a second terminal window and run ```npm run server``` to start the local backend
+- Add tasks 
+
 
 ## Technologies Used
 - React
@@ -62,14 +70,6 @@
 
 ## Lighthouse audit
 <img width="1266" alt="lighthouse-audit" src="https://user-images.githubusercontent.com/50157153/124833719-75589d80-df33-11eb-8d0f-58b7f1e9597f.png">
-
-## Setup
-Fork and clone down the repo
-
-Once you have locally cloned down the repo, within that directory, run npm install. Once all dependencies are installed, 
-- run ```npm start```  
-- Open a second terminal window and run ```npm run server``` to start the local backend
-- Add tasks 
 
 
 ## Issues
