@@ -34,7 +34,7 @@
 
 ## Demo
 
-
+*Adding a task, choosing a date/time and setting the task priority*
 ![Adding a task, choosing a date/time and setting the task priority](https://media.giphy.com/media/iwxPKxaATiR8P8PpZt/giphy.gif)</br>
 
 Adding a task
