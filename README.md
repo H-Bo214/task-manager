@@ -1,6 +1,7 @@
 # Task Manager
 > A simple task tracking application with C.R.U.D functionality. 
 
+
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
@@ -27,6 +28,7 @@
 - React date picker
 - CSS
 
+
 ## Features
 - Add a task
 - Add/Update a task's priority
@@ -42,11 +44,16 @@
 *Adding a task*
 ![Adding a task](https://media.giphy.com/media/3qflNbMf7aXGAsJvwe/giphy.gif)
 
-Toggle task priority
+*Toggle task priority*
+
+
 ![](https://media.giphy.com/media/2yuXKehczH8xrmB0xa/giphy.gif)</br>
 
-Deleting a task
+*Deleting a task*
+
+
 ![](https://media.giphy.com/media/geZxMKVkhWeg2ICB4j/giphy.gif)</br>
+
 
 ## Lighthouse audit
 <img width="1266" alt="lighthouse-audit" src="https://user-images.githubusercontent.com/50157153/124833719-75589d80-df33-11eb-8d0f-58b7f1e9597f.png">
