@@ -12,16 +12,18 @@
 * [Issues](#issues)
 * [Acknowledgements](#acknowledgements)
 * [Contact](#contact)
-<!-- * [License](#license) -->
 
 
 ## General Information
 - Task Manager allows you to create and manage a list of tasks.
 
+
 ## Setup
 Fork and clone down the repo
 
 Once you have locally cloned down the repo, within that directory, run npm install. Once all dependencies are installed, 
+
+
 - run ```npm start```  
 - Open a second terminal window and run ```npm run server``` to start the local backend
 - Add tasks 
@@ -33,6 +35,7 @@ Once you have locally cloned down the repo, within that directory, run npm insta
 - React Testing Library
 - Json Server (mock back-end)
 - Git version control
+- Github projects
 - React date picker
 - CSS
 
