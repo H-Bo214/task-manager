@@ -34,11 +34,11 @@
 
 ## Demo
 
-Adding a task, choosing a date/time and setting the task priority
-![](https://media.giphy.com/media/iwxPKxaATiR8P8PpZt/giphy.gif)</br>
+
+![Adding a task, choosing a date/time and setting the task priority](https://media.giphy.com/media/iwxPKxaATiR8P8PpZt/giphy.gif)</br>
 
 Adding a task
-![](https://media.giphy.com/media/3qflNbMf7aXGAsJvwe/giphy.gif)</br>
+![](https://media.giphy.com/media/3qflNbMf7aXGAsJvwe/giphy.gif)
 
 Toggle task priority
 ![](https://media.giphy.com/media/2yuXKehczH8xrmB0xa/giphy.gif)</br>
