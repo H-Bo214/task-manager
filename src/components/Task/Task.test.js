@@ -55,12 +55,16 @@ describe('Task',  () => {
         />
       </MemoryRouter>
      ) 
+
     const text = screen.getByText(task.text)
     expect(text).toBeInTheDocument()
+
     const date = screen.getByText(task.date)
     expect(date).toBeInTheDocument()
+
     const img = screen.getByRole('img')
     expect(img).toBeInTheDocument()
+
     fireEvent.click(img)
     expect(deleteTask).toHaveBeenCalledTimes(1)
     
@@ -96,21 +100,25 @@ describe('Task',  () => {
       </MemoryRouter>
      ) 
 
-     const text = screen.getByText(task.text)
-     expect(text).toBeInTheDocument()
-     const date = screen.getByText(task.date)
-     expect(date).toBeInTheDocument()
-     const img = screen.getByRole('img')
-     expect(img).toBeInTheDocument()
-     fireEvent.dblClick(text)
-     expect(changePriority).toHaveBeenCalledTimes(1)
+    const text = screen.getByText(task.text)
+    expect(text).toBeInTheDocument()
+
+    const date = screen.getByText(task.date)
+    expect(date).toBeInTheDocument()
+
+    const img = screen.getByRole('img')
+    expect(img).toBeInTheDocument()
+
+    fireEvent.dblClick(text)
+    expect(changePriority).toHaveBeenCalledTimes(1)
      
-     task = {
-      "text": "Dentist appointment",
-      "date": "July 17, 2021, 11:00 AM",
-      "priority": true,
-      "id": 1
+    task = {
+    "text": "Dentist appointment",
+    "date": "July 17, 2021, 11:00 AM",
+    "priority": true,
+    "id": 1
     }
+    
     render (
       <MemoryRouter>
         <Task 
@@ -120,7 +128,7 @@ describe('Task',  () => {
       </MemoryRouter>
      )
      
-     expect(task.priority).toBe(true) 
+    expect(task.priority).toBe(true) 
   })
 
 })
