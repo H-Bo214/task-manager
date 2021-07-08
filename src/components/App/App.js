@@ -59,9 +59,7 @@ function App() {
 
   const togglePriority = async (id) => {
     const taskToChange = await fetchTask(id)
-    console.log('taskToChag', taskToChange)
     const updatedTask = {...taskToChange, priority: !taskToChange.priority} 
-    console.log('updatedTask', updatedTask)
     const updatedData = await changePriority(taskToChange.id, updatedTask)
 
     setTasks(tasks.map(task => task.id === id ? {...task, priority: updatedData.priority}: task))

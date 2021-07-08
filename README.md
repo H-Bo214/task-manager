@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Task Manager
+> A simple task tracking application with C.R.U.D functionality. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Table of Contents
+* [General Info](#general-information)
+* [Technologies Used](#technologies-used)
+* [Features](#features)
+* [Demo](#Demo)
+* [Setup](#setup)
+* [Lighthouse Audit](#lighthouse-audit)
+* [Issues](#issues)
+* [Acknowledgements](#acknowledgements)
+* [Contact](#contact)
 
-In the project directory, you can run:
 
-### `npm start`
+## General Information
+Task Manager allows you to create and manage a list of tasks.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Setup
+Fork and clone down the repo
 
-### `npm test`
+Once you have locally cloned down the repo, within that directory, run npm install. Once all dependencies are installed, 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+- run ```npm start```  
+- Open a second terminal window and run ```npm run server``` to start the local backend
+- Add tasks 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies Used
+- React
+- React Router
+- React Testing Library
+- Json Server (mock back-end)
+- Git version control
+- Github projects
+- React date picker
+- CSS
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Features
+- Add a task
+- Add/Update a task's priority
+- Delete any previously added tasks
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Demo
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+*Adding a task, choosing a date/time and setting the task priority*
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![Adding a task, choosing a date/time and setting the task priority](https://media.giphy.com/media/iwxPKxaATiR8P8PpZt/giphy.gif)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+*Adding a task*
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+![Adding a task](https://media.giphy.com/media/3qflNbMf7aXGAsJvwe/giphy.gif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+*Toggle task priority*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+![](https://media.giphy.com/media/2yuXKehczH8xrmB0xa/giphy.gif)</br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+*Deleting a task*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+![](https://media.giphy.com/media/geZxMKVkhWeg2ICB4j/giphy.gif)</br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+## Lighthouse audit
+<img width="1266" alt="lighthouse-audit" src="https://user-images.githubusercontent.com/50157153/124833719-75589d80-df33-11eb-8d0f-58b7f1e9597f.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Issues
+There is a known issue concerning App.js integration testing. 
+
+## Acknowledgements
+
+- [X icon made by Vectors Market from flaticon](https://www.flaticon.com/authors/vectors-market)
+- [React date-picker](https://preview.npmjs.com/package/react-datepicker) 
+- [Json Server](https://github.com/typicode/json-server)
+
+
+## Contact
+Created by [Horacio Borrego](https://github.com/H-Bo214) - feel free to contact me!
