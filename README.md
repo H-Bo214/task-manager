@@ -76,7 +76,7 @@ Once you have locally cloned down the repo, within that directory, run npm insta
 
 
 ## Issues
-There is a known issue concerning App.js integration testing. 
+There is a known issue in App.test.js when testing fetchTask and changePriority async calls. 
 
 ## Acknowledgements
 
